@@ -550,7 +550,8 @@ export class SettingState {
    */
   altSelectKeyCodes = [
     'Semicolon',
-    'Quote',
+    'AltLeft',
+    'AltRight',
     'Digit2',
     'Digit3',
     'Digit4',
