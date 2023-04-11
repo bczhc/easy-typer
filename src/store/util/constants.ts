@@ -48,8 +48,9 @@ export const symbol2CH = {
     { reg: /'(.*?)'/g, replacement: '‘$1’' }
   ],
   connector: [
-    { reg: /-/g, replacement: '—' },
+    { reg: /--/g, replacement: '——' },
     { reg: /⋯/g, replacement: '…' },
+    { reg: /─/g, replacement: '—' },
     { reg: /\.\.\./g, replacement: '…' }
   ],
   book: [
