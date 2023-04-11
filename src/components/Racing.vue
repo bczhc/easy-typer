@@ -106,7 +106,11 @@ export default class Racing extends Vue {
             window.electronAPI.setGrade('typing finished!')
           }
         }, () => {
-          this.$message.warning('你的浏览器不支持自动复制，请手动操作！')
+          this.$message({
+            type: 'info',
+            message: text,
+            duration: 10000
+          })
 
           const timestamp = localStorage.getItem('clipboard_err_tip_ts')
           if (timestamp && dayjs(+timestamp).isSame(dayjs(), 'day')) {
