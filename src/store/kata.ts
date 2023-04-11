@@ -1,7 +1,7 @@
 
 import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 import { QuickTypingState, KataState } from './types'
-import { isMobile, shuffle } from './util/common'
+import { isMobile, shuffle, shuffleText } from './util/common'
 import { Message } from 'element-ui'
 import { kataHistory } from './util/KataHistory'
 
@@ -67,7 +67,7 @@ const mutations: MutationTree<KataState> = {
   },
 
   random: (state) => {
-    state.currentContent = shuffle(state.currentContent.split('')).join('')
+    state.currentContent = shuffleText(state.currentContent)
   },
 
   mode: (state, newMode: number) => {

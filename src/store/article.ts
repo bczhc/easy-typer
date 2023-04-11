@@ -349,7 +349,7 @@ const actions: ActionTree<ArticleState, QuickTypingState> = {
     apiFunc().then((data: { title: string; content: string }) => {
       const article: Partial<KataState> = {
         articleTitle: `${data.title}`,
-        articleText: shuffle(data.content.split('')).join(''),
+        articleText: shuffleText(data.content),
         currentParagraphNo: 1,
         indentity: defaultIdentity,
         paragraphSize: 10
