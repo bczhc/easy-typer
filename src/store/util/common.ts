@@ -1,3 +1,5 @@
+import GraphemeSplitter from 'grapheme-splitter'
+
 export function shuffle (arr: string[]) {
   let m = arr.length
   while (m > 1) {
@@ -8,8 +10,9 @@ export function shuffle (arr: string[]) {
 }
 
 export function shuffleText (text: string) {
-  const arr = text.split('')
-  return shuffle(arr).join('')
+  // 使用Unicode字形簇，防止破坏组合字形
+  const graphemes = new GraphemeSplitter().splitGraphemes(text)
+  return shuffle(graphemes).join('')
 }
 
 export function initColorMode (mode = '', initial = false) {

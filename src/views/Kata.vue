@@ -136,7 +136,7 @@ import { Component, Vue, Watch } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
 import { KataState } from '@/store/types'
 import { KataArticle } from '@/store/kata'
-import { shuffle, isMobile } from '@/store/util/common'
+import { shuffle, isMobile, shuffleText } from '@/store/util/common'
 import { noop } from 'vue-class-component/lib/util'
 import eapi from '@/api/easyTyper'
 import { KataOptions } from '@/models/articleModels'
@@ -353,7 +353,7 @@ export default class Home extends Vue {
   }
 
   handleShuffle () {
-    this.articleText = shuffle(this.articleText.split('')).join('')
+    this.articleText = shuffleText(this.articleText)
   }
 
   startFullKata () {
