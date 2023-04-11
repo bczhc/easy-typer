@@ -106,10 +106,11 @@ export default class Racing extends Vue {
             window.electronAPI.setGrade('typing finished!')
           }
         }, () => {
-          this.$message({
+          this.$notify({
             type: 'info',
+            title: '手动复制成绩',
             message: text,
-            duration: 10000
+            duration: 5000
           })
 
           const timestamp = localStorage.getItem('clipboard_err_tip_ts')
