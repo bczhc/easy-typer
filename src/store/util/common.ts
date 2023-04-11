@@ -10,7 +10,7 @@ export function shuffle (arr: string[]) {
 }
 
 export function shuffleText (text: string) {
-  // we honor Unicode grapheme clusters here, to prevent breaking composed glyphs
+  // 使用Unicode字形簇，防止破坏组合字形
   const graphemes = new GraphemeSplitter().splitGraphemes(text)
   return shuffle(graphemes).join('')
 }
