@@ -190,7 +190,7 @@ const state: ArticleState = {
 const getters: GetterTree<ArticleState, QuickTypingState> = {
   // 长度
   length ({ content }): number {
-    return content.length
+    return [...content].length
   }
 }
 
