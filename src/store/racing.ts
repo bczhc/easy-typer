@@ -374,6 +374,8 @@ const mutations: MutationTree<RacingState> = {
     keyCount[code] = (count || 0) + 1
     keys.push(code)
 
+    console.log(e)
+
     // 判断选重
     if (e.isComposing && altSelectKeyCodes.indexOf(e.code) >= 0) {
       state.selective++
