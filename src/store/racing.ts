@@ -377,7 +377,21 @@ const mutations: MutationTree<RacingState> = {
     console.log(e)
 
     // 判断选重
-    if (e.isComposing && altSelectKeyCodes.indexOf(e.code) >= 0) {
+    if (e.isComposing && [
+      'Semicolon',
+      'Quote',
+      'AltLeft',
+      'AltRight',
+      'Digit2',
+      'Digit3',
+      'Digit4',
+      'Digit5',
+      'Digit6',
+      'Digit7',
+      'Digit8',
+      'Digit9',
+      'BracketLeft'
+    ].indexOf(e.code) >= 0) {
       state.selective++
     }
 
