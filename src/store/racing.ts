@@ -380,8 +380,8 @@ const mutations: MutationTree<RacingState> = {
     if (e.isComposing && [
       'Semicolon',
       'Quote',
-      'AltLeft',
-      'AltRight',
+      'CapsLock',
+      'Tab',
       'Digit2',
       'Digit3',
       'Digit4',
@@ -390,7 +390,7 @@ const mutations: MutationTree<RacingState> = {
       'Digit7',
       'Digit8',
       'Digit9',
-      'BracketLeft'
+      'Slash'
     ].indexOf(e.code) >= 0) {
       state.selective++
     }
