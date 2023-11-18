@@ -390,6 +390,7 @@ const mutations: MutationTree<RacingState> = {
       'Digit7',
       'Digit8',
       'Digit9',
+      'BracketLeft',
       'Slash'
     ].indexOf(e.code) >= 0) {
       state.selective++
